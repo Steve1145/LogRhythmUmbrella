@@ -18,6 +18,6 @@ Get-ChildItem -path $FilesToRemove -Recurse | Where-Object {($_.LastWriteTime -l
 
 Get-ChildItem -path $Dest | Where-Object {$_.name -like $YesterdaysFolder} | Remove-Item -Force -Recurse
 
-#Limit to 7 days of log data in the original folders (so historic logs dont build up)
+# Limit to 7 days of log data in the original folders (so historic logs dont build up)
 
 Get-ChildItem -path $OriginalSource -Recurse | Where-Object {$_.name -like $LastWeeksOriginalFolder} | Remove-Item -Force -Recurse
